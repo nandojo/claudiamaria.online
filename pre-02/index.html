@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<title>protocolo de peso perfecto</title>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" href="favicon.jpg">
+<style>
+    header {
+      background:"headerbg2.png";
+      background-repeat: no-repeat;
+    }
+    @font-face {
+      font-family: Gotham Rounded;
+      src: url("font.otf") format("opentype");
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      font-family: Gotham Rounded;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background: url("fundo.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .container {
+      width: 700px;
+      max-width: 90%;
+    }
+    .black {
+      background-color: black;
+      padding: 10px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 0 10px 2px black;
+    }
+    .answer {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 10px;
+    }
+    @media (max-width: 991px) {
+      .answer {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 10px;
+      }
+    }
+    .btn {
+      border-radius: 10px;
+      padding: 5px 10px;
+      font-size: 30px;
+      background-color: #f7ce6a;
+      outline: none;
+      text-decoration: none;
+      color: black;
+    }
+    .black h1 {
+      color: yellow;
+    }
+    .black p {
+      font-size: 18px;
+      color: white;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3254541058093518');
+fbq('track', 'AddToCart');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3254541058093518&ev=AddToCart&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+</head>
+<body>
+
+<div class="container">
+<div class="black">
+<div id="primeira">
+<div class="question">
+<h1>Pregunta 1</h1>
+<p>¿Quieres conocer el método para despertar las 7 hormonas adelgazantes en tu cuerpo?</p>
+</div>
+<div class="answer">
+<button class="btn" onclick="segunda()">SÍ</button>
+<button class="btn" onclick="segunda()">NO</button>
+</div>
+</div>
+<div id="segunda" class="hide">
+<div class="question">
+<h1>Pregunta 2</h1>
+<p>¿Ha utilizado algún método para bajar de peso?</p>
+</div>
+<div class="answer">
+<button class="btn" onclick="terceira()">SÍ</button>
+<button class="btn" onclick="terceira()">NO</button>
+</div>
+</div>
+<div id="terceira" class="hide">
+<div class="question">
+<h1>Pregunta 3</h1>
+<p>El video tiene un límite de personas para verlo al mismo tiempo... Tienes la intención de verlo hasta el final?</p>
+</div>
+<div class="answer">
+<button class="btn" onclick="redirect()">SÍ</button>
+<button class="btn" onclick="redirect()">NO</button>
+</div>
+</div>
+</div>
+<p style="text-align: center; font-weight: bold;">© 2022 - Todos los derechos reservados. Este sitio web no está afiliado a Facebook ni a ninguna entidad de Facebook.</p>
+</div>
+<script>
+    function segunda() {
+      document.getElementById("primeira").classList.add("hide")
+      document.getElementById("segunda").classList.remove("hide")
+    }
+    function terceira() {
+      document.getElementById("segunda").classList.add("hide")
+      document.getElementById("terceira").classList.remove("hide")
+    }
+    function redirect() {
+      location.href = "https://mirtaortega.online"
+    }
+  </script>
+</body>
+</html>
